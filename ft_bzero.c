@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: smasatak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 17:19:08 by smasatak          #+#    #+#             */
-/*   Updated: 2026/04/25 14:36:31 by smasatak         ###   ########.fr       */
+/*   Created: 2026/04/25 12:15:36 by smasatak          #+#    #+#             */
+/*   Updated: 2026/04/25 12:59:38 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void* ft_memset(void *s, int c, size_t n)
+void  ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	size_t	i;
+	int	i;
 
-	i = 0;
 	ptr = (unsigned char *)s;
+	i = 0;
 	while (i < n)
 	{
-		s[i] = (unsigned char)c;
+		ptr[i] = '\0';
 		i++;
 	}
-	return (s);
+	return;
 }

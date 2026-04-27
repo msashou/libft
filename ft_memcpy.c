@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: smasatak <masatak@student.42tokyo.jp>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 17:19:08 by smasatak          #+#    #+#             */
-/*   Updated: 2026/04/25 14:36:31 by smasatak         ###   ########.fr       */
+/*   Created: 2026/04/25 14:53:31 by smasatak          #+#    #+#             */
+/*   Updated: 2026/04/25 15:14:01 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void* ft_memset(void *s, int c, size_t n)
+void ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*ptr;
-	size_t	i;
-
+	int	i;
+	unsigned char *d = (unsigned char*)dest;
+	const unsigned char *s = (const unsigned char*)src;
+	
 	i = 0;
-	ptr = (unsigned char *)s;
-	while (i < n)
+	while(i < n)
 	{
-		s[i] = (unsigned char)c;
+		d[i] = s[i];
 		i++;
 	}
-	return (s);
+	return (dest);
 }
