@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
+/*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 16:22:16 by smasatak          #+#    #+#             */
-/*   Updated: 2026/04/28 20:57:15 by masatakesas      ###   ########.fr       */
+/*   Updated: 2026/04/29 14:49:17 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char*	ft_strchr(const char *s, int c)
 			return ((char *)s);
 		if (*s == '\0')
 			break;
-			s++;
+		s++;
 	}
 	return (NULL);
 }
