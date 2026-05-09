@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/28 16:22:16 by smasatak          #+#    #+#             */
-/*   Updated: 2026/04/29 14:49:17 by smasatak         ###   ########.fr       */
+/*   Created: 2026/05/09 13:27:04 by smasatak          #+#    #+#             */
+/*   Updated: 2026/05/09 15:57:44 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char*	ft_strchr(const char *s, int c)
+char	*ft_substr(const cahr *s, unsigned int start, size_t len)
 {
-	while (1)
-	{
-		if (*s == c)
-			return ((char *)s);
-		if (*s == '\0')
-			break;
-		s++;
-	}
-	return (NULL);
-}
+	size_t	i;
+	char	*str;
 
-int	main(void)
-{
-	const char	s[] = "Hello";
-	char	c1 = e;
-
-	printf("%s\n", ft_strchr(s, c1));
+	if (!s)
+		return NULL;
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	
 }
