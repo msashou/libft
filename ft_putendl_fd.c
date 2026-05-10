@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 16:54:53 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/10 23:17:10 by smasatak         ###   ########.fr       */
+/*   Created: 2026/05/10 17:54:20 by smasatak          #+#    #+#             */
+/*   Updated: 2026/05/10 18:14:18 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	n = 0;
-	
-	while (s[n] != '\0')
-		n++;
-	return n;
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+	return ;
 }
+
+// int	main(void)
+// {
+// 	ft_putendl_fd("AA rock star!", 1);
+// 	return (0);
+// }

@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 16:54:53 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/10 23:17:10 by smasatak         ###   ########.fr       */
+/*   Created: 2026/05/10 17:27:18 by smasatak          #+#    #+#             */
+/*   Updated: 2026/05/10 17:51:52 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	n = 0;
-	
-	while (s[n] != '\0')
-		n++;
-	return n;
+	int	i;
+
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+	return ;
 }
+
+// int	main(void)
+// {
+// 	ft_putstr_fd("Please your meat^^", 1);
+// 	ft_putchar_fd('\n', 1);
+// 	ft_putstr_fd(NULL, 1);
+// 	ft_putstr_fd("", 1);
+// 	ft_putstr_fd("Error message test\n", 2);
+
+// 	return (0);
+// }
