@@ -1,46 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/27 12:28:39 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/11 15:41:51 by smasatak         ###   ########.fr       */
+/*   Created: 2026/05/11 12:26:05 by smasatak          #+#    #+#             */
+/*   Updated: 2026/05/11 13:18:20 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	i;
+	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
-	if (size > 0)
+	while (s[i])
 	{
-		while (size - 1 > i)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}
-	while (src[i] != '\0')
-	{
+		f(i, &s[i]);
 		i++;
 	}
-	return (i);
+	return ;
 }
+
+// void	tolowerupper(unsigned int i, char *c)
+// {
+// 	if (i % 2 == 0)
+// 	{
+// 		if (*c >= 'a' && *c <= 'z')
+// 			*c-= 32;
+// 	}
+// 	else
+// 	{
+// 		if (*c >= 'A' && *c <= 'Z')
+// 			*c += 32;
+// 	}
+// 	return ;
+// }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 	const char	*src = "0123456789";
-// 	char	dst[12];
-// 	int	x = 10;
-// 	printf("%zu\n", ft_strlcpy(dst,src, x));
-// 	printf("%s\n", dst);
+// 	char	str[] = "Seeing pink elephant";
+
+// 	printf("Before:%s\n", str);
+// 	ft_striteri(str, tolowerupper);
+// 	printf("After:%s\n", str);
+
 // 	return (0);
 // }
