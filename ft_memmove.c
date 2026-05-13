@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smasatak <masatak@student.42tokyo.jp>      +#+  +:+       +#+        */
+/*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 15:23:26 by smasatak          #+#    #+#             */
-/*   Updated: 2026/04/25 15:56:21 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/05/13 15:08:27 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@ void ft_memmove(void *dest, const coid *src, size_t n)
 	int	v;
 
 	i = 0;
-	if (desr > src)
+	if (dest > src)
 	{
-		while (src != '\0)
+		while (src != '\0')
 		{
 			d[i] = s[i];
 			i--;
 		}
-	ekse
-	{	
+	}
+	else
+	{
 		while (src != '\0')
 		{
 			d[i] = s[i];
@@ -35,4 +36,3 @@ void ft_memmove(void *dest, const coid *src, size_t n)
 	}
 	return (dest);
 }
-

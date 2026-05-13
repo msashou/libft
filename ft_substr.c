@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 13:27:04 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/11 15:43:18 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/05/13 15:08:35 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

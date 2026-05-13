@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 16:22:16 by smasatak          #+#    #+#             */
-/*   Updated: 2026/04/29 14:49:17 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/05/13 15:08:30 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char*	ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (1)
 	{
@@ -25,10 +25,11 @@ char*	ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-int	main(void)
-{
-	const char	s[] = "Hello";
-	char	c1 = e;
+// int	main(void)
+// {
+// 	const char	s[] = "Hello";
+// 	int	c;
 
-	printf("%s\n", ft_strchr(s, c1));
-}
+// 	c = 'o';
+// 	printf("%s\n", ft_strchr(s,c));
+// }

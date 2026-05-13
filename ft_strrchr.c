@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 22:33:02 by smasatak          #+#    #+#             */
-/*   Updated: 2026/04/30 01:10:44 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/05/13 15:08:33 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	char		c1;
 	const char	*start;
 
-	c1 = (char *)c;
+	c1 = (char)c;
 	start = s;
 	while (*s != '\0')
 		s++;
@@ -33,7 +33,7 @@ char	*ft_strrchr(const char *s, int c)
 // int	main(void)
 // {
 // 	char	c1[] = "Hello";
-// 	char	c2 = 'H';
+// 	char	c2 = 'Hello';
 
 // 	printf("%s", ft_strrchr(c1, c2));
 // 	return (0);
