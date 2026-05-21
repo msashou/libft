@@ -6,7 +6,7 @@
 /*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 16:54:29 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/13 15:08:36 by masatakesas      ###   ########.fr       */
+/*   Updated: 2026/05/20 23:24:03 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stddef.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+
+t_list	*ft_lstlast(t_list *lst);
 
 size_t ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
