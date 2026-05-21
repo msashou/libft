@@ -6,7 +6,7 @@
 /*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 12:15:36 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/13 15:08:23 by masatakesas      ###   ########.fr       */
+/*   Updated: 2026/05/22 02:21:04 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void  ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
-	int	i;
+	size_t	i;
 
 	ptr = (unsigned char *)s;
 	i = 0;

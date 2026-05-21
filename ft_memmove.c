@@ -6,32 +6,31 @@
 /*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 15:23:26 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/13 15:08:27 by masatakesas      ###   ########.fr       */
+/*   Updated: 2026/05/22 02:37:37 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_memmove(void *dest, const coid *src, size_t n)
-{
-	unsigned char *d = (unsigned char *)dest;
-	unsigned char *s = (unsigned char *)src;
-	int	i;
-	int	v;
+#include "libft.h"
 
-	i = 0;
-	if (dest > src)
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char			*d;
+	const unsigned char		*s;
+
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (d > s)
 	{
-		while (src != '\0')
-		{
-			d[i] = s[i];
-			i--;
-		}
+		while (n--)
+			d[n] = s[n];
 	}
 	else
 	{
-		while (src != '\0')
+		while (n-- > 0)
 		{
-			d[i] = s[i];
-			i--;
+			*d = *s;
+			d++;
+			s++;
 		}
 	}
 	return (dest);

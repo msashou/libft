@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 15:28:39 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/13 20:20:26 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/05/22 02:40:03 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	count_words(char const *s, char c)
 	n = 0;
 	while (*s)
 	{
-		if (*s != c && *(s + 1) == c || *(s + 1) == '\0')
+		if ((*s != c && *(s + 1) == c) || *(s + 1) == '\0')
 			n++;
 		s++;
 	}
