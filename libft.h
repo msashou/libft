@@ -6,7 +6,7 @@
 /*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 16:54:29 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/20 23:24:03 by masatakesas      ###   ########.fr       */
+/*   Updated: 2026/05/21 19:33:19 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ struct s_list *next;
 } t_list;
 
 t_list	*ft_lstlast(t_list *lst);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void*));
 
 size_t ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
