@@ -6,7 +6,7 @@
 /*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 16:54:29 by smasatak          #+#    #+#             */
-/*   Updated: 2026/05/21 19:33:19 by masatakesas      ###   ########.fr       */
+/*   Updated: 2026/05/22 14:14:17 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define LIBFT_H
 
 //関数のプロトタイプ宣言
+#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stddef.h>

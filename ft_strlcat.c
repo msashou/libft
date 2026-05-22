@@ -6,38 +6,36 @@
 /*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 12:21:46 by masatakesas       #+#    #+#             */
-/*   Updated: 2026/04/28 15:24:09 by masatakesas      ###   ########.fr       */
+/*   Updated: 2026/05/22 14:46:03 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	j;
+	int		i;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	re_dstlen;
 
 	i = 0;
-	j = 0;
-	while (dst[i] != '\0' && src[j] != '\0')
-	{
-		i++;
-		j++;
-	}
-	if (i >= size)
-		return (size + j);
+	dst_len = ft_strlen(dst);
+	re_dstlen = dst_len;
+	src_len = ft_strlen(src);
+	if (size <= dst_len)
+		return (size + src_len);
 	else
 	{
-		return (i + j + 1);
-		j = 0;
-		while (i <= size - 1 && src[j] != '\0')
+		while (dst_len < size - 1 && src[i] != '\0')
 		{
-			dst[i] = src[j];
+			dst[dst_len] = src[i];
+			dst_len++;
 			i++;
-			j++;
 		}
 	}
-	dst[i] = '\0';
+	dst[dst_len] = '\0';
+	return (re_dstlen + src_len);
 }
 
 // int main(void)
