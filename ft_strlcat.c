@@ -6,7 +6,7 @@
 /*   By: masatakesasho <masatakesasho@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 12:21:46 by masatakesas       #+#    #+#             */
-/*   Updated: 2026/05/22 14:46:03 by masatakesas      ###   ########.fr       */
+/*   Updated: 2026/05/26 12:14:35 by masatakesas      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	re_dstlen;
 
 	i = 0;
+	src_len = ft_strlen(src);
+	if (size == 0)
+		return (ft_strlen(src));
 	dst_len = ft_strlen(dst);
 	re_dstlen = dst_len;
-	src_len = ft_strlen(src);
 	if (size <= dst_len)
 		return (size + src_len);
 	else
@@ -42,7 +44,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 // {
 // 	char dst[20] = "Hello,";
 // 	const char	src[] = "42.";
-// 	printf("%zu\n", ft_strlcat(dst, src, 10));
+// 	printf("%zu\n", ft_strlcat(dst, src, 0));
 // 	printf("%s", dst);
 // 	return (0);
 // }
