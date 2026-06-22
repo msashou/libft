@@ -6,13 +6,13 @@
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 16:08:16 by smasatak          #+#    #+#             */
-/*   Updated: 2026/06/22 19:00:30 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/06/22 19:04:25 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int	n)
+static int	ft_isspace(int n)
 {
 	return (n == ' ' || (n > 8 && n <= 13));
 }
