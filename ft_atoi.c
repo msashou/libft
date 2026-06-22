@@ -6,11 +6,16 @@
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 16:08:16 by smasatak          #+#    #+#             */
-/*   Updated: 2026/06/18 17:09:43 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/06/22 18:46:25 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_isspace(n)
+{
+	return (n == ' ' || (n > 8 && n <= 13));
+}
 
 int	ft_atoi(const char *nptr)
 {
@@ -20,7 +25,7 @@ int	ft_atoi(const char *nptr)
 
 	res = 0;
 	negative = 1;
-	while (*nptr == ' ' || (*nptr > 8 && *nptr <= 12))
+	while (ft_isspace(*nptr))
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 	{
@@ -30,15 +35,15 @@ int	ft_atoi(const char *nptr)
 	}
 	while (*nptr >= '0' && *nptr <= '9')
 	{
-		next = res * 10 + (*nptr - '0') * negative;
-		if (negative == 1 && next < res)
-			return ((int)LONG_MAX);
-		if (negative == -1 && next > res)
-			return ((int)LONG_MIN);
+		next = res * 10 + (*nptr - '0');
+		if (negative == 1 && next > INT_MAX)
+			return ((int)INT_MAX);
+		if (negative == -1 && next < INT_MIN)
+			return ((int)INT_MIN);
 		res = next;
 		nptr++;
 	}
-	return ((int)res);
+	return ((int)res * negative);
 }
 
 // #include <stdio.h>

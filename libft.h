@@ -6,7 +6,7 @@
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 16:54:29 by smasatak          #+#    #+#             */
-/*   Updated: 2026/06/22 15:34:28 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/06/22 18:42:46 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 # include <stddef.h>
 # include <string.h>
 # include <strings.h>
-# include <limits.h>
 # include <stdint.h>
+# include <limits.h>
 
 typedef struct s_list
 {
