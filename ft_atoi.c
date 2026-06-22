@@ -6,13 +6,13 @@
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 16:08:16 by smasatak          #+#    #+#             */
-/*   Updated: 2026/06/22 18:46:25 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/06/22 19:00:30 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(n)
+static int	ft_isspace(int	n)
 {
 	return (n == ' ' || (n > 8 && n <= 13));
 }
@@ -38,12 +38,12 @@ int	ft_atoi(const char *nptr)
 		next = res * 10 + (*nptr - '0');
 		if (negative == 1 && next > INT_MAX)
 			return ((int)INT_MAX);
-		if (negative == -1 && next < INT_MIN)
+		if (negative == -1 && next > (long)INT_MAX + 1)
 			return ((int)INT_MIN);
 		res = next;
 		nptr++;
 	}
-	return ((int)res * negative);
+	return ((int)(res * negative));
 }
 
 // #include <stdio.h>
@@ -69,5 +69,6 @@ int	ft_atoi(const char *nptr)
 // 	printf("%d\n", ft_atoi("2147483648"));
 // 	printf("%d\n", ft_atoi("-2147483649"));
 // 	printf("%d\n", ft_atoi("999999999999999999999"));
+// 	printf("%d\n", ft_atoi("-2000000000"));
 // 	return (0);
 // }
