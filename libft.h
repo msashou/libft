@@ -16,8 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
-# include <string.h>
-# include <strings.h>
 # include <stdint.h>
 # include <limits.h>
 
