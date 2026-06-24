@@ -6,7 +6,7 @@
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 21:28:27 by smasatak          #+#    #+#             */
-/*   Updated: 2026/06/18 17:14:25 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/06/24 06:43:26 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb != 0 && size > SIZE_MAX / nmemb)
 		return (NULL);
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
 	res = (void *)malloc(nmemb * size);
 	if (!res)
 		return (NULL);
@@ -26,7 +28,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 
 // #include <stdio.h>
-// #include <stdlib.h>
 
 // int	main(void)
 // {
@@ -64,6 +65,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 	printf("%p\n", p3);
 // 	printf("%p\n", p4);
 // 	printf("%p\n", p5);
+
+// 	printf("%s\n", (char *)p3);
 
 // 	free(arr1);
 // 	free(arr2);

@@ -6,7 +6,7 @@
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 16:22:16 by smasatak          #+#    #+#             */
-/*   Updated: 2026/06/14 16:07:06 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/06/24 06:13:22 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (1)
+	while (*s != '\0')
 	{
 		if (*s == (char)c)
 			return ((char *)s);
-		if (*s == '\0')
-			break ;
 		s++;
 	}
+	if (*s == (char)c)
+		return ((char *)s);
 	return (NULL);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {
