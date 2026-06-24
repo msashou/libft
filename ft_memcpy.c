@@ -6,7 +6,7 @@
 /*   By: smasatak <smasatak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 00:35:41 by smasatak          #+#    #+#             */
-/*   Updated: 2026/06/24 06:49:57 by smasatak         ###   ########.fr       */
+/*   Updated: 2026/06/24 10:47:13 by smasatak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*dest_cpy;
-	unsigned char	*src_cpy;
+	unsigned char		*src_cpy;
 
 	dest_cpy = (unsigned char *)dest;
 	src_cpy = (unsigned char *)src;
